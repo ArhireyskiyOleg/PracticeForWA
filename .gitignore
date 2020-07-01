@@ -1,0 +1,26 @@
+# compiled output
+/PracticeUI/dist
+/PracticeUI/dist-server
+/PracticeUI/tmp
+/PracticeUI/out-tsc
+
+# dependencies
+/PracticeUI/node_modules
+
+# IDE - VSCode
+/PracticeUI/.vscode/*
+!/PracticeUI/.vscode/settings.json
+!/PracticeUI/.vscode/tasks.json
+!/PracticeUI/.vscode/launch.json
+!/PracticeUI/.vscode/extensions.json
+
+# misc
+/PracticeUI/.sass-cache
+/PracticeUI/connect.lock
+/PracticeUI/coverage
+/PracticeUI/libpeerconnection.log
+/PracticeUI/typings
+
+# System Files
+.DS_Store
+Thumbs.db
