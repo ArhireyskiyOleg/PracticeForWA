@@ -1,0 +1,35 @@
+@import './src/assets/variables.scss';
+.register-container {
+  margin-top: 5%;
+  margin-left: 25%;
+  margin-bottom: 5%;
+  form {
+    padding: 10%;
+  }
+}
+.register-form {
+  padding: 5%;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+  h3 {
+    text-align: center;
+    color: $prblack;
+  }
+  .btnSubmit {
+    font-weight: 600;
+    color: $white;
+    background-color: $primary;
+    width: 50%;
+    border-radius: 1rem;
+    padding: 1.5%;
+    border: none;
+    cursor: pointer;
+  }
+  .ForgetPwd {
+    color: $primary;
+    font-weight: 600;
+    text-decoration: none;
+  }
+}
+.contentmain {
+  min-height: 100vh;
+}
