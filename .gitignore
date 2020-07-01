@@ -24,3 +24,6 @@
 # System Files
 .DS_Store
 Thumbs.db
+
+# IDE intellij
+/PracticeBackEnd/.idea/*
