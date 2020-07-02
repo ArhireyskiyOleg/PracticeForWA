@@ -22,9 +22,9 @@ export class LoginComponent implements OnInit {
     private buildForm: FormBuilder,
     private alertService: AlertService
   ) {
-    //if (this.autService.currentUserValue) {
-      //this.router.navigate(['/home']);
-   // }
+    if (this.autService.curUserVal) {
+      this.router.navigate(['/home']);
+    }
   }
 
   get loginControls() {
@@ -39,7 +39,7 @@ export class LoginComponent implements OnInit {
     this.retUrl = this.activRoute.snapshot.queryParams['retUrl'] || '/';
   }
 
-  onsubmit() {
+  onSubmit() {
     this.subm = true;
 
     this.alertService.clear();
