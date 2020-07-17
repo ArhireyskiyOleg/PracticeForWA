@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet author="oleg" id="003">
+
+        <loadData catalogName="NewsDB"
+                  commentLineStartsWith="A String"
+                  encoding="UTF-8"
+                  file="news_pict.csv"
+                  quotchar="'"
+                  relativeToChangelogFile="true"
+                  schemaName="public"
+                  separator=","
+                  tableName="news_pict"
+                  usePreparedStatements="true" >
+            <column header="id_pict" name="id_pict" type="NUMERIC"/>
+            <column header="id_new" name="id_new" type="NUMERIC"/>
+        </loadData>
+    </changeSet>
+</databaseChangeLog>

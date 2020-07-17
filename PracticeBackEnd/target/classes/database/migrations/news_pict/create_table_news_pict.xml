@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+    http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="2" author="oleg">
+        <sql>
+            DROP TABLE IF EXISTS public.news_pict CASCADE;
+        </sql>
+
+        <createTable tableName="news_pict" catalogName="NewsDB" schemaName="public">
+
+            <column name="id_pict" type="integer">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="id_new" type="integer">
+                <constraints nullable="false"/>
+            </column>
+
+        </createTable>
+
+        <addPrimaryKey
+                tableName="news_pict"
+                columnNames="id_pict,id_new"
+                constraintName="news_pict_pkey"/>
+
+        <addForeignKeyConstraint
+            baseTableName="news_pict"
+            baseColumnNames="id_new"
+            constraintName="fk_id_new"
+            referencedTableName="news"
+            referencedColumnNames="id_news"/>
+
+        <addForeignKeyConstraint
+                baseTableName="news_pict"
+                baseColumnNames="id_pict"
+                constraintName="fk_id_pict"
+                referencedTableName="pictures"
+                referencedColumnNames="id_pict"/>
+
+    </changeSet>
+
+</databaseChangeLog>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+    http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="4" author="oleg">
+        <sql>
+            DROP TABLE IF EXISTS public.tag CASCADE;
+        </sql>
+
+        <createTable tableName="tag" catalogName="NewsDB" schemaName="public">
+
+            <column name="id_tag" type="integer">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="name_tag" type="text">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="description" type="text"/>
+
+        </createTable>
+
+        <addPrimaryKey
+                tableName="tag"
+                columnNames="id_tag"
+                constraintName="tag_pkey"/>
+
+    </changeSet>
+
+</databaseChangeLog>
