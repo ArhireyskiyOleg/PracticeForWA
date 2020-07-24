@@ -11,16 +11,16 @@
     <include file="database\migrations\news_pict\create_table_news_pict.xml"/>
     <include file="database\migrations\tag_news\create_table_tag_news.xml"/>
 
-<!--    <include file="database\migrations\news\insert_news.xml"/>-->
-<!--    <include file="database\migrations\pictures\insert_pictures.xml"/>-->
-<!--    <include file="database\migrations\tag\insert_tag.xml"/>-->
-<!--    <include file="database\migrations\news_pict\insert_news_pict.xml"/>-->
-<!--    <include file="database\migrations\tag_news\insert_tag_news.xml"/>-->
-
     <include file="database\migrations\news\load_news.xml"/>
     <include file="database\migrations\pictures\load_pictures.xml"/>
     <include file="database\migrations\tag\load_tag.xml"/>
     <include file="database\migrations\news_pict\load_news_pict.xml"/>
     <include file="database\migrations\tag_news\load_tag_news.xml"/>
+
+<!--    <include file="database\migrations\news\insert_news.xml"/>-->
+<!--    <include file="database\migrations\pictures\insert_pictures.xml"/>-->
+<!--    <include file="database\migrations\tag\insert_tag.xml"/>-->
+<!--    <include file="database\migrations\news_pict\insert_news_pict.xml"/>-->
+<!--    <include file="database\migrations\tag_news\insert_tag_news.xml"/>-->
 
 </databaseChangeLog>

@@ -5,7 +5,7 @@
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
     http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
 
-    <changeSet id="5" author="oleg">
+    <changeSet id="005" author="oleg">
         <sql>
             DROP TABLE IF EXISTS public.tag_news CASCADE;
         </sql>

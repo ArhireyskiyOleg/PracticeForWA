@@ -6,7 +6,7 @@
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
          http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
 
-    <changeSet author="oleg" id="009">
+    <changeSet author="oleg1" id="001233">
 
         <loadData catalogName="NewsDB"
                   commentLineStartsWith="A String"
@@ -20,7 +20,7 @@
                   usePreparedStatements="true" >
             <column header="id_news" name="id_news" type="NUMERIC"/>
             <column header="title" name="title" type="STRING"/>
-            <column header="ref_text" name="ref_text" type="STRING"/>
+            <column header="description" name="description" type="STRING"/>
             <column header="date_new" name="date_new" type="DATE"/>
         </loadData>
     </changeSet>

@@ -5,7 +5,7 @@
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
     http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
 
-    <changeSet id="1" author="oleg">
+    <changeSet id="001" author="oleg">
         <sql>
             DROP TABLE IF EXISTS public.news CASCADE;
         </sql>
@@ -20,7 +20,7 @@
                 <constraints nullable="false"/>
             </column>
 
-            <column name="ref_text" type="text"/>
+            <column name="description" type="text"/>
 
             <column name="date_new" type="date">
                 <constraints nullable="false"/>

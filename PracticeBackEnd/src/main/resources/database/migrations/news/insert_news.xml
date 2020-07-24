@@ -5,11 +5,11 @@
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
     http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
 
-    <changeSet id="0022" author="oleg">
+    <changeSet id="001111" author="oleg">
         <sql>
             INSERT INTO public.news(
-            id_news, title, ref_text, date_new)
-            VALUES (0, 'Criminal in Metall', 'some ref of news', '22.02.2019');
+            id_news, title, description, date_new)
+            VALUES (1, 'Criminal in Pohvistnevo', 'some description', '22.02.2020');
         </sql>
 
     </changeSet>

@@ -1,2 +1,13 @@
 id_tag,name_tag,description
 1,Criminal,News include antisocial activities of people. Only 16+ ages.
+2,Politics,About potician live
+3,Russia,All events in Russia
+4,Putin,This new is about president Putin
+5,IT,This new is about IT-industry
+6,USA,This new is about USA
+7,Finance,"This new is about economic, currencies and money"
+8,War,This new is about conflict in some country
+9,Medicina,This new is about peoples health 
+10,Social,This is social new
+11,Sport,This new is about sport events and sportsmen
+12,Science,"This new about some scientists, inventions and future"
