@@ -1,49 +1,42 @@
-@import "assets/color.scss";
+@import './src/assets/color.scss';
 
-
-.menuVertical {
-  width: 80px;
-  height: 100%;
-  background: $darkgrey;
-
-  .navlist {
-    margin-top: 80px;
-    display: block;
-    height: auto;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    position: relative;
-  }
+mat-toolbar{
   a {
-    font-size: 2em;
-    text-align: center;
-    position: relative;
-    display: block;
-    color: $lightgrey;
-    line-height: 2em;
-    padding: 10px 15px;
-  }
-}
-
-.example-sidenav-container {
-  flex: 1;
-}
-.hsubmenu {
-  float: right;
-
-  a {
+    color: #2182ea;
+    font-size: 1.5em;
     padding: 15px;
-    color: $lightgrey;
+
   }
   a:link {
     text-decoration: none;
   }
+  button:focus {
+    outline: none;
+  }
+  .mat-icon-button {
+    background-color: white;
+    line-height: 20px;
+  }
+  .btn {
+    vertical-align: revert;
+  }
 }
 
-.mainappclass {
+mat-nav-list {
+  width: 70px;
   height: 100%;
+  background: #2182ea;
+
+  a {
+    color: #fff;
+    font-size: 2em;
+    text-align: center;
+    position: relative;
+    display: block;
+    line-height: 2em;
+  }
 }
-.contentmain {
-  min-height: 100vh;
+
+mat-sidenav-container {
+  height: 98vh;
 }

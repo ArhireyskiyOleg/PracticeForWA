@@ -1,39 +1,35 @@
 <mat-toolbar color="white">
   <mat-toolbar-row class="row">
     <div class="col-8">
-    <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()" color="black">
-      <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-    </button>
-  </div>
-  <div class="col-4 hsubmenu">
-    <a class="fas fa-star" routerLink="" routerLinkActive="active"></a>
-      <a class="fas fa-bell" routerLink="table" routerLinkActive="active"></a>
-      <a class="fas fa-cubes" routerLink="favourite" routerLinkActive="active"></a>
-      <div *ngIf="currentUser; then thenBlock else elseBlock"> </div>
-      <ng-template #thenBlock><button mat-button [matMenuTriggerFor]="menu">{{currentUser.firstName}}</button>
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+    </div>
+    <div class="col-4 hsubmenu">
+      <a class="fas fa-home" routerLink="" routerLinkActive="active"></a>
+      <a class="fas fa-user" routerLink="table" routerLinkActive="active"></a>
+      <div *ngIf="currentUser; then thenBlock; else elseBlock"></div>
+      <ng-template #thenBlock><button mat-button [matMenuTriggerFor]="menu">{{ currentUser.firstName }}</button>
         <mat-menu #menu="matMenu">
-          <button mat-menu-item>{{currentUser.username}}</button>
+          <button mat-menu-item>{{ currentUser.username }}</button>
           <button mat-menu-item (click)="onlogoutcl()">Выйти</button>
         </mat-menu></ng-template>
-      <ng-template #elseBlock><button routerLink="/login" type="button" class="btn btn-outline-warning ">Войти</button></ng-template>
-  </div>
+      <ng-template #elseBlock><button routerLink="/login" type="button" class="btn btn-outline-primary">Войти</button></ng-template>
+    </div>
   </mat-toolbar-row>
 </mat-toolbar>
-<mat-sidenav-container class="sidenav-container" >
+<mat-sidenav-container class="sidenav-container">
   <mat-sidenav #drawer mode="side" opened="false" role="navigation" class="menuVertical">
     <mat-nav-list class="navlist">
-      <a class="fas fa-home" routerLink="" routerLinkActive="active"></a>
-      <a class="fas fa-window-restore" routerLink="table" routerLinkActive="active"></a>
-      <a class="fas fa-star" routerLink="favourite" routerLinkActive="active"></a>
+      <a class="fas fa-newspaper" routerLink="" routerLinkActive="active"></a>
+      <a class="fas fa-rss-square" routerLink="table" routerLinkActive="active"></a>
       <div *ngIf="currentUser">
-      <a class="fas fa-user" routerLink="user" routerLinkActive="active"></a>
+        <a class="fas fa-user" routerLink="user" routerLinkActive="active"></a>
       </div>
     </mat-nav-list>
   </mat-sidenav>
-    <div class="jumbotron jumbotron-fluid contentmain ">
-      <div class="container ">
-                  <router-outlet></router-outlet>
 
-      </div>
+  <div class="container">
+    <router-outlet></router-outlet>
   </div>
 </mat-sidenav-container>

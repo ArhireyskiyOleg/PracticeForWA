@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "PracticeUI"
+    }
+  },
+  "defaultProject": "PracticeUI",
+  "cli": {
+    "analytics": false
+  }
 }

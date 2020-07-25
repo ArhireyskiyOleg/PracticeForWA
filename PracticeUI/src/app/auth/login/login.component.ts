@@ -3,8 +3,8 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { first } from 'rxjs/operators';
 
-import {  AuthenticationService } from '../services';
-import { AlertService } from '../services';
+import {  AuthenticationService,AlertService } from '@app/services/';
+
 @Component({
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss'],
