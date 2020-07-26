@@ -1,0 +1,26 @@
+<mat-card>
+  <form #newForm="ngForm" (ngSubmit)="save(newForm.value)">
+    <mat-card-header>
+      <mat-card-title><h2>{{news.name ? 'Edit' : 'Add'}} New</h2></mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <input type="hidden" name="href" [(ngModel)]="news.href">
+      <mat-form-field>
+        <input matInput placeholder="New Name" [(ngModel)]="news.name"
+               required name="name" #name>
+      </mat-form-field>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" type="submit"
+              [disabled]="!newForm.valid">Save</button>
+      <button mat-raised-button color="secondary" (click)="remove(news.href)"
+              *ngIf="news.href" type="button">Delete</button>
+      <a mat-button routerLink="/news-list">Cancel</a>
+    </mat-card-actions>
+    <mat-card-footer>
+      <div class="giphy">
+        <img src="{{news.giphyUrl}}" alt="{{news.name}}">
+      </div>
+    </mat-card-footer>
+  </form>
+</mat-card>

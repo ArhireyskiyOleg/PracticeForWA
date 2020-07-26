@@ -12,6 +12,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import { MatCardModule} from '@angular/material/card';
 import { MatInputModule} from '@angular/material/input';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -45,6 +46,7 @@ import {AuthModule} from './auth/auth.module';
     MatMenuModule,
     MatExpansionModule,
     AppRoutingModule,
+    FormsModule,
     NgbModule,
     HttpClientModule,
     ReactiveFormsModule,

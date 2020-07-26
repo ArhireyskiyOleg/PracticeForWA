@@ -1,0 +1,15 @@
+<mat-card>
+  <mat-card-title>News List</mat-card-title>
+  <mat-card-content>
+    <mat-list>
+      <mat-list-item *ngFor="let newss of news">
+        <img mat-list-avatar src="{{newss.giphyUrl}}" alt="{{newss.name}}">
+        <h3 mat-line>
+          <a mat-button [routerLink]="['/new-edit', newss.id]">{{newss.name}}</a>
+        </h3>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+
+  <button mat-fab color="primary" [routerLink]="['/new-add']">Add</button>
+</mat-card>
